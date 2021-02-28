@@ -7,10 +7,16 @@ export enum BudgetEnumTypes {
 }
 
 export interface BudgetState {
-    inc: number
-    exp: number
+    inc: BudgetInc[]
+    exp: BudgetExp[]
 }
 
-export interface Budget {
+export interface BudgetInc {
+    description: string
     income: number
+}
+
+export interface BudgetExp {
+    description: string
+    expenses: number
 }

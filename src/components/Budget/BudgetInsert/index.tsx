@@ -14,10 +14,17 @@ const BudgetInsert = () => {
 
   const add = () => {
     const type = selectType.current?.value
+   
     if (type === 'inc') {
-      dispatch(setInc(Number(value.current?.value)))
+      dispatch(setInc({
+        description: String(description.current?.value),
+        income: Number(value.current?.value)
+      }))
     } else if (type === 'exp') {
-      dispatch(setExp(Number(value.current?.value)))
+      dispatch(setExp({
+        description: String(description.current?.value),
+        expenses: Number(value.current?.value)
+      }))
     }
   }
 
