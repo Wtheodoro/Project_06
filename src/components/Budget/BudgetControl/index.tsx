@@ -8,15 +8,14 @@ import { Container } from './styles';
 const BudgetControl = () => {
   return (
     <Container>
-      <h1>Budget Ctrl</h1>
       <div className="title">
         Available Budget in <span className="month">%Month%</span>
       </div>
       <div className="value">
         +2.323,55
       </div>
-      <BudgetDisplay type={'income'} charge={'+'}/>
-      <BudgetDisplay type={'expenses'} charge={'-'}/>
+      <BudgetDisplay type={'income'} charge={'+'} backgroundColor={'#28B9B5'}/>
+      <BudgetDisplay type={'expenses'} charge={'-'} backgroundColor={'#FF5049'}/>
     </Container>
   );
 };

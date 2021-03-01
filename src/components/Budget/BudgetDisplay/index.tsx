@@ -28,7 +28,7 @@ const BudgetDisplay = (props: any) => {
   }, [budgetState])
 
   return (
-    <Container>
+    <Container backgroundColor={props.backgroundColor}>
       <div className="text">{props.type}</div>
       <div className="right">
         {

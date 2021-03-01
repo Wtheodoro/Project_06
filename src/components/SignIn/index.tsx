@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { Container } from './styles';
 import { Avatar, Button, TextField, Typography } from '@material-ui/core';
@@ -9,30 +9,29 @@ import { Redirect } from 'react-router-dom';
 const SignIn = () => {
 
   const [permission, setPermission] = useState<Boolean>(false)
-  const [reRender, setReRender] = useState<Boolean>(true)
+  const [reRender, setReRender] = useState<Boolean>(false)
 
   const dispatch = useDispatch()
   const inputEmail = useRef<HTMLInputElement>(null)
   const inputPassword = useRef<HTMLInputElement>(null)
 
-  const callSignIn = async () => {
+  useEffect (() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+     setPermission(true) 
+    }
+  }, [reRender])
+
+  const callSignIn = () => {
     const info = {
       email: inputEmail?.current?.value,
       password: inputPassword?.current?.value,
     }
     dispatch(loadTokenRequest(info))
-
-    await seeToken()
-  }
-
-  const seeToken = () => {
-    const token = localStorage.getItem('token')
-    if (token) {
-     setPermission(true) 
-    }
     setReRender(!reRender)
   }
 
+  console.log('login', reRender, permission)
   return (
     <>
       <Container>
