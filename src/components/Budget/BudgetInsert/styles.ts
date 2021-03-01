@@ -5,6 +5,9 @@ export const Container = styled.div`
     border-bottom: 1px solid #131313;
     border-top: 1px solid #131313;
     background: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .add_type {
         width: 3.5rem;
@@ -36,6 +39,7 @@ export const Container = styled.div`
         color: #28B9B5;
         cursor: pointer;
         margin-left: 0.6px;
+        border: none;
 
         &:active { transform: translateY(2px)}
         &:focus { outline: none }

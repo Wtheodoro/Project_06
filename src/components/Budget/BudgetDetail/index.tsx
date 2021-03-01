@@ -2,6 +2,7 @@ import { setRef } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteExp, deleteInc } from '../../../store/ducks/budget/acrion';
+import { IoRemoveCircleOutline } from 'react-icons/io5'
 
 import { Container } from './styles';
 
@@ -42,23 +43,24 @@ const BudgetDetail = (props: any) => {
 
   return (
     <Container>
-      <h2>{props.type}</h2>
+      <div className={props.type}>
+      <h2 className={`${props.type}_title`}>{props.type}</h2>
       {
         itens?.map((i: any) => (
           <div className={`${props.type}_list`}>
-            <div className="line">
+            <div className="item">
               <div className="item_description">{i.description}</div>
               <div className="right">
                 <div className="item_value">+ {i.income || i.expenses}</div>
                 <div className="item_delete">
-                  <button className="item_delete_btn" onClick={()=>deleteItem(i)}>X</button>
+                  <button className="item_delete_btn" onClick={()=>deleteItem(i)}><IoRemoveCircleOutline/></button>
                 </div>
               </div>
             </div>
           </div>
         ))
       }
-      
+      </div>
     </Container>
   );
 };
