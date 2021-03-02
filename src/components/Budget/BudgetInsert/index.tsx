@@ -15,17 +15,22 @@ const BudgetInsert = () => {
   const add = () => {
     const type = selectType.current?.value
    
-    if (type === 'inc') {
-      dispatch(setInc({
-        description: String(description.current?.value),
-        income: Number(value.current?.value)
-      }))
-    } else if (type === 'exp') {
-      dispatch(setExp({
-        description: String(description.current?.value),
-        expenses: Number(value.current?.value)
-      }))
+    if (description.current?.value !== '' && value.current?.value) {
+      if (type === 'inc') {
+        dispatch(setInc({
+          description: String(description.current?.value),
+          income: Number(value.current?.value)
+        }))
+      } else if (type === 'exp') {
+        dispatch(setExp({
+          description: String(description.current?.value),
+          expenses: Number(value.current?.value)
+        }))
+      }
+    } else {
+      alert('campo vazio')
     }
+
   }
 
   return (
