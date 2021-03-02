@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { BudgetState } from '../../../store/ducks/budget/types';
 import BudgetDisplay from '../BudgetDisplay';
+import getCurrentMonth from '../../../utils/newDate'
 
 import { Container } from './styles';
 
@@ -9,6 +10,8 @@ const BudgetControl = () => {
 
   const [total, setTotal] = useState<number>()
   const {exp, inc} = useSelector((state: any) => state.reducerBudget)
+  const month = getCurrentMonth()
+
 
   useEffect(() => {
     setTotal(sum())
@@ -28,7 +31,7 @@ const BudgetControl = () => {
   return (
     <Container>
       <div className="title">
-        Available Budget in <span className="month">%Month%</span>
+        Available Budget in <span className="month">{month}</span>
       </div>
       <div className="value">
         {total}
