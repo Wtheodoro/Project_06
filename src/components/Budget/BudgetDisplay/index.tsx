@@ -11,19 +11,22 @@ const BudgetDisplay = (props: any) => {
 
   useEffect (() => {
     const reducer = (accumulator: any, currentValue: any) => accumulator + currentValue
+
     if (props.type === 'income' && budgetState.inc) {
       let sumInc: any[] = []
       budgetState.inc.map((i: any) => {
         sumInc.push(i.income)
-        setBills(sumInc.reduce(reducer, 0))
       })
+      setBills(sumInc.reduce(reducer, 0))
+
 
     } else if (props.type === 'expenses' && budgetState.exp) {
       let sumExp: any[] = []
         budgetState.exp.map((i: any) => {
         sumExp.push(i.expenses)
-        setBills(sumExp.reduce(reducer, 0))
       })
+      setBills(sumExp.reduce(reducer, 0))
+
     }
   }, [budgetState])
 

@@ -17,6 +17,7 @@ function reducerBudget(state = INITIAL_BUDGET_STATE, action: any) {
             state.inc.splice(indexOfItem, 1)
             return {
                 ...state,
+                inc: [...state.inc]
             }
         case BudgetEnumTypes.SET_EXP_BUDGET:
             return {
@@ -28,6 +29,7 @@ function reducerBudget(state = INITIAL_BUDGET_STATE, action: any) {
             state.exp.splice(indexOfItemExp, 1)
             return {
                 ...state,
+                exp: [...state.exp]
             }
         default:
             return state

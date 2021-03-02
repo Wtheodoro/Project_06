@@ -12,7 +12,6 @@ const BudgetControl = () => {
 
   useEffect(() => {
     setTotal(sum())
-    console.log(exp, inc)
   }, [exp, inc])
 
   const sum = () => {

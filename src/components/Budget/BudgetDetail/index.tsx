@@ -15,7 +15,6 @@ const BudgetDetail = (props: any) => {
   const dispatch = useDispatch()
 
   useEffect (() => {
-    // isso ainda não funciona como deveria
     if (props.type === 'income' && budgetState.inc) {      
       setItens(budgetState.inc)
     } else if (props.type === 'expenses' && budgetState.exp) {
@@ -24,16 +23,10 @@ const BudgetDetail = (props: any) => {
   }, [budgetState])
 
   const deleteItem = (item: any) => {
-    // const indexOfItem = itens.findIndex((element: any) => element.description === item.description)
-    // itens.splice(indexOfItem, 1)
-    // setRe(!Re)
-
     if (item.income) {
-      console.log('income', item)
       dispatch(deleteInc(item))
       setRe(!Re)
     } else if (item.expenses) {
-      console.log('expenses', item)
       dispatch(deleteExp(item))
       setRe(!Re)
     } else {
