@@ -21,14 +21,14 @@ const EspecifcCurrency = () => {
 
   return (
     <Container>
-      <h2>especifi currency</h2>
       {
         ready && convertedCurrency &&
         <>
-          <p>Name: {convertedCurrency[0].name}</p>
-          <p>Symbol: {convertedCurrency[0].symbol}</p>
-          <p>Country code: {convertedCurrency[0].country_code}</p>
-          <p>Mother land:{convertedCurrency[0].country_name}</p>
+          <h2>especifi currency</h2>
+          <p><strong>Name : </strong>{convertedCurrency[0].name}</p>
+          <p><strong>Symbol : </strong>{convertedCurrency[0].symbol}</p>
+          <p><strong>Country code : </strong>{convertedCurrency[0].country_code}</p>
+          <p><strong>Mother land : </strong>{convertedCurrency[0].country_name}</p>
         </>
       }
     </Container>
