@@ -6,5 +6,6 @@ export const Container = styled.div`
 
     .list {
         width: 50rem;
+        margin-left: 5rem;
     }
 `;

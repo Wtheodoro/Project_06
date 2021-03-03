@@ -1,18 +1,14 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { Container } from './styles';
 
 const NavBar = () => {
   return (
     <Container>
-      <h1>NavBar</h1>
-      <p>link</p>
-      <p>link</p>
-      <p>link</p>
-      <p>link</p>
-      <p>link</p>
-      <p>link</p>
-      <p>link</p>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/coins">Currency</NavLink>
+      <NavLink to="/budget">Budget</NavLink>
     </Container>
   );
 };

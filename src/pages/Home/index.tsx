@@ -18,14 +18,16 @@ const Home = () => {
   }, [])
   return (
     <>
-    {/* <NavBar /> */}
-    <Container>
-    <Typography variant="h5">Welcome Walison!</Typography>
-      <div className="btn">
-        <Link to="/coins">Coins</Link>
-        <Link to="/budget">Budget</Link>
-      </div>
-    </Container>
+      <Container>
+        <NavBar />
+          <div className="content">
+            <Typography variant="h5">Welcome Walison!</Typography>
+              <div className="btn">
+                <Link to="/coins">Coins</Link>
+                <Link to="/budget">Budget</Link>
+              </div>
+          </div>
+      </Container>
     {
       denyPermission &&
       <Redirect to="/" />

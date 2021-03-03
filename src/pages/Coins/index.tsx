@@ -6,6 +6,7 @@ import { CoinReducerState, CoinType } from '../../store/ducks/coins/types';
 import { GridList, GridListTile} from '@material-ui/core'
 
 import { Container } from './styles';
+import NavBar from '../../components/NavBar';
 
 const Coins = () => {
 
@@ -23,15 +24,7 @@ const Coins = () => {
 
   return (
     <Container>
-      {/* <div className="list">
-      {
-        coins?.map((i: CoinType) => (
-          <div key={i.name}>
-            <p onClick={() => details(i)} key={i.name}>{i.name}</p>
-          </div>
-        ))
-      }
-      </div> */}
+      <NavBar />
       <div className="list">
       <h1>Currency</h1>
 
