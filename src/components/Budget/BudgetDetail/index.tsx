@@ -40,7 +40,7 @@ const BudgetDetail = (props: any) => {
       <h2 className={`${props.type}_title`}>{props.type}</h2>
       {
         itens?.map((i: any) => (
-          <div className={`${props.type}_list`}>
+          <div className={`${props.type}_list`} key={props.description}>
             <div className="item">
               <div className="item_description">{i.description}</div>
               <div className="right">
