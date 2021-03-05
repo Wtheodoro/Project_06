@@ -2,14 +2,14 @@ import { Reducer } from 'redux'
 import { SignEnumTypes, AccessToken } from './types'
 
 const INITIAL_STATE: any = {
-    accessToken: ''
+    accessToken: '',
 }
 
 const reducerToken: Reducer<AccessToken> = (state = INITIAL_STATE, action) => {
     switch(action.type) {
         case SignEnumTypes.POST_LOGIN_SUCCESS:
             return {
-                ...state
+                ...state,
             }
         case SignEnumTypes.POST_LOGIN_FAILURE:
             return {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Container } from './styles';
 import { Avatar, Button, TextField, Typography } from '@material-ui/core';
 import { loadTokenRequest } from '../../store/ducks/logIn/actions';
@@ -7,20 +7,9 @@ import { Redirect } from 'react-router-dom';
 
 
 const SignIn = () => {
-
-  const [permission, setPermission] = useState<Boolean>(false)
-  const [reRender, setReRender] = useState<Boolean>(false)
-
   const dispatch = useDispatch()
   const inputEmail = useRef<HTMLInputElement>(null)
   const inputPassword = useRef<HTMLInputElement>(null)
-
-  useEffect (() => {
-    const token = localStorage.getItem('token')
-    if (token) {
-     setPermission(true) 
-    }
-  }, [reRender])
 
   const callSignIn = () => {
     const info = {
@@ -28,10 +17,8 @@ const SignIn = () => {
       password: inputPassword?.current?.value,
     }
     dispatch(loadTokenRequest(info))
-    setReRender(!reRender)
   }
 
-  console.log('login', reRender, permission)
   return (
     <>
       <Container>
@@ -45,10 +32,6 @@ const SignIn = () => {
         <TextField id="standard-basic" label="Password" inputRef={inputPassword} fullWidth/>
         <Button variant="contained" color="primary" onClick={callSignIn}>Sign in</Button>
       </Container>
-      {
-        permission &&
-        <Redirect to="/home" />
-      }
     </>
   );
 };
