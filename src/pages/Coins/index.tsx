@@ -25,6 +25,7 @@ const Coins = () => {
   return (
     <Container>
       <NavBar />
+      <div className="content">
       <div className="list">
       <h1>Currency</h1>
 
@@ -38,7 +39,10 @@ const Coins = () => {
           }
         </GridList>
       </div>
-      <EspecifcCurrency />
+      <div className="detail">
+        <EspecifcCurrency />  
+      </div>
+      </div>
     </Container>
   );
 };

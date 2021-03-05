@@ -6,7 +6,7 @@ import { Container } from './styles';
 const NavBar = () => {
   return (
     <Container>
-      <NavLink to="/">Home</NavLink>
+      <NavLink to="/home">Home</NavLink>
       <NavLink to="/coins">Currency</NavLink>
       <NavLink to="/budget">Budget</NavLink>
     </Container>

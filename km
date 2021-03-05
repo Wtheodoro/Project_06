@@ -1,0 +1,59 @@
+[33mcommit 8cbce5def7a87ec65a84902fa3e689459eb52ba1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Wed Mar 3 17:13:03 2021 -0300
+
+    bar
+
+[33mcommit 5dd174661df588a7357d84e90bc7a0417c66739a[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Tue Mar 2 11:09:04 2021 -0300
+
+    month
+
+[33mcommit f7866d05df93635ff4af2fc1909af786fbd91ffa[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Tue Mar 2 10:56:48 2021 -0300
+
+    up
+
+[33mcommit d203d1d88fdcba89f3e945d584342367563538ed[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Tue Mar 2 10:52:18 2021 -0300
+
+    up
+
+[33mcommit d5f14b0c60f874c631d072ab388ffbcaf7594e76[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Tue Mar 2 10:19:19 2021 -0300
+
+    up
+
+[33mcommit bd58ac90afa9063a83c4b3dad31172fdd37b51e6[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Mon Mar 1 11:51:39 2021 -0300
+
+    budget css
+
+[33mcommit 2703326cd2da35b6757669c2d2a0754f89cd4c4d[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Mon Mar 1 10:54:10 2021 -0300
+
+    design
+
+[33mcommit 2d3d13da5e58329f5aa1abfe773fc84ed06d3d5f[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Sun Feb 28 18:18:40 2021 -0300
+
+    faith
+
+[33mcommit 1cae38252205001c8d6923587d97165aaa32d795[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Sun Feb 28 14:56:14 2021 -0300
+
+    p6
+
+[33mcommit 1922e33157d94193498ece6ed40f67367b9c8b02[m
+Author: WTheodoro <theodoro.walison@gmail.com>
+Date:   Sat Feb 27 10:02:15 2021 -0300
+
+    Initialize project using Create React App
